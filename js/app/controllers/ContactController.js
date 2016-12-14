@@ -13,7 +13,13 @@ function ContactController() {
     }];
 
     vm.addContact = function() {
-      vm.contacts.push(vm);
+      vm.contacts.push({
+        name: vm.name,
+        phone: vm.phone
+      });
+
+      vm.name = '';
+      vm.phone = '';
     }
 
     vm.removeContact = function (index) {
